@@ -7,6 +7,9 @@ This project implements a custom DWA (Dynamic Window Approach) local planner for
 ## Quick Start
 
 1. Clone this repo inside your ROS2 workspace `src` folder and build: cd ~/dwa_ws
+
+```bash
+cd ~/dwa_ws
 colcon build
 source install/setup.bash
 export TURTLEBOT3_MODEL=burger
