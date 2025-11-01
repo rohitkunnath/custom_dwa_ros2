@@ -6,13 +6,12 @@ This project implements a custom DWA (Dynamic Window Approach) local planner for
 
 ## Quick Start
 
-1. Clone this repo inside your ROS2 workspace `src` folder and build:
-
-cd ~/dwa_ws
+1. Clone this repo inside your ROS2 workspace `src` folder and build: cd ~/dwa_ws
 colcon build
 source install/setup.bash
 export TURTLEBOT3_MODEL=burger
 ros2 launch my_worlds my_custom_launch.py
+
 
 2. Use RViz to set a goal and watch the robot navigate using the custom DWA.
 
