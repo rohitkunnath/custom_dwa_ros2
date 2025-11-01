@@ -30,26 +30,38 @@ Before you begin, make sure you have the following installed:
 - **Gazebo 11 or later**
 - **TurtleBot3 packages**
 
-Install TurtleBot3 packages if not already installed:
-```bash
-sudo apt install ros-humble-turtlebot3* -y
 
 ```
 📂 Project Structure
 ```bash
 dwa_ws/
-└── src/
-    ├── custom_dwa_planner/        # Custom DWA algorithm node
-    │   ├── custom_dwa_planner/
-    │   │   └── dwa_planner.py     # Main DWA logic
-    │   ├── package.xml
-    │   └── setup.py
-    ├── my_worlds/                 # Custom Gazebo worlds and launch files
-    │   ├── worlds/
-    │   │   └── my_world.world
-    │   └── launch/
-    │       └── my_custom_launch.py
-    └── ...
+├── build/
+├── install/
+├── log/
+├── src/
+│   ├── custom_dwa/
+│   │   ├── custom_dwa/
+│   │   │   ├── __init__.py
+│   │   │   ├── dwa_planner_node.py          # Custom DWA planner logic
+│   │   ├── launch/
+│   │   │   └── dwa_planner_launch.py        # Launch file for the planner
+│   │   ├── resource/
+│   │   │   └── custom_dwa
+│   │   ├── rviz_config/
+│   │   │   └── rviz_config.rviz             # RViz visualization config
+│   │   ├── package.xml
+│   │   ├── setup.cfg
+│   │   └── setup.py
+│   │
+│   ├── my_worlds/
+│   │   ├── launch/
+│   │   │   └── my_custom_launch.py          # Launches Gazebo + RViz + robot
+│   │   └── worlds/
+│   │       └── my_world.world               # Custom Gazebo world
+│   │
+│   ├── CMakeLists.txt
+│   └── package.xml
+
 ```
 
 ⚙️ Installation & Setup
@@ -58,7 +70,9 @@ dwa_ws/
 Clone this project inside your ROS 2 workspace (for example ~/dwa_ws/src):
 ```bash
 cd ~/dwa_ws/src
-git clone https://github.com/<your-username>/custom_dwa_ros2.git
+git clone https://github.com/rohitkunnath/custom_dwa_ros2.git
+mv custom_dwa_ros2/src/* .
+rm -rf custom_dwa_ros2
 ```
 2️⃣ Build the workspace
 ```bash
