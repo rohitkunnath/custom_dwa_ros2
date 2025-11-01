@@ -14,12 +14,13 @@ colcon build
 source install/setup.bash
 export TURTLEBOT3_MODEL=burger
 ros2 launch my_worlds my_custom_launch.py
+```
 
-
-2. Use RViz to set a goal and watch the robot navigate using the custom DWA.
+2. Use RViz to send a goal using Nav2 goal and watch the robot navigate using the custom DWA.
 
 ## Requirements
 
 - ROS2 Humble
 - Gazebo 11+
 - TurtleBot3 packages
+
