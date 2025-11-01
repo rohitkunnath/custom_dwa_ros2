@@ -69,6 +69,7 @@ dwa_ws/
 
 Clone this project inside your ROS 2 workspace (for example ~/dwa_ws/src):
 ```bash
+mkdir -p ~/dwa_ws/src
 cd ~/dwa_ws/src
 git clone https://github.com/rohitkunnath/custom_dwa_ros2.git
 mv custom_dwa_ros2/src/* .
@@ -95,9 +96,9 @@ source ~/turtlebot3_ws/install/setup.bash
 Before launching, set your TurtleBot3 model (for example, burger):
 ```bash
 export TURTLEBOT3_MODEL=burger
-
-(Optional) To make this permanent, add the line above to your ~/.bashrc.
 ```
+(Optional) To make this permanent, add the line above to your ~/.bashrc.
+
 🚀 Running the Simulation
 1️⃣ Launch Gazebo and RViz
 ```bash
@@ -113,8 +114,9 @@ This will:
 
 2️⃣ Send a Navigation Goal
 
-In RViz2, use the “Nav2 Goal” tool to click on a destination point.
+In RViz2, use the “2D Goal Pose” tool to click on a destination point.
 Your TurtleBot3 will start navigating toward the goal using the Custom DWA Planner.
+
 🧪 Verification
 
     Observe the robot in Gazebo avoiding obstacles and moving toward the goal.
