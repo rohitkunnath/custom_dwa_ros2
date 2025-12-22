@@ -10,6 +10,11 @@ The DWA algorithm enables the robot to **navigate smoothly to a goal position wh
 You can visualize and control the robot using **RViz2** and send navigation goals interactively through the **Nav2** stack.
 
 ---
+## 🧭 DWA Trajectory Visualization (Click to Play Demo)
+
+[![Custom DWA Trajectory Output](dwa.jpg)](https://drive.google.com/file/d/1bZOr0EKZZezLPvlJQPz5Ep2Z438SkvrJ/view?usp=sharing)
+
+---
 
 ## 🧩 Features
 - ✅ Fully compatible with **ROS 2 Humble**
